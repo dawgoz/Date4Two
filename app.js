@@ -112,6 +112,11 @@ const sourceLinks = document.querySelector('#source-links');
 const savedButton = document.querySelector('#saved');
 const dialog = document.querySelector('#details');
 const surprise = document.querySelector('#surprise');
+const eventDay = new Intl.DateTimeFormat('sv-SE', { timeZone: 'Europe/Vilnius' });
+const displayDay = new Intl.DateTimeFormat('en-GB', {
+  day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC',
+});
+let eventsUpdatedAt;
 let category = 'all';
 let savedOnly = false;
 let lastSurprise;
@@ -137,6 +142,7 @@ for (const [key, label] of Object.entries(categories)) {
 }
 
 function active(idea) {
+  if (idea.endsOn) return idea.endsOn >= eventDay.format(new Date());
   return !idea.expires || idea.expires > Date.now();
 }
 
@@ -190,6 +196,11 @@ function render() {
     link.rel = 'noopener noreferrer';
     sourceLinks.append(link);
   }
+  if (eventsUpdatedAt && !savedOnly && (category === 'all' || category === 'event')) {
+    const updated = document.createElement('span');
+    updated.textContent = 'Event calendar checked ' + displayDay.format(new Date(eventDay.format(eventsUpdatedAt)));
+    sourceLinks.append(updated);
+  }
   sourceLinks.hidden = !sourceLinks.children.length;
   for (const button of filters.children) {
     button.setAttribute('aria-pressed', String(button.dataset.filter === category));
@@ -236,8 +247,11 @@ function openDetails(idea) {
   content.querySelector('.meta').textContent = [idea.area, idea.time, idea.cost].join(' · ');
   content.querySelector('.plan').textContent = idea.plan;
   const links = content.querySelector('.detail-links');
-  const map = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(idea.place + ', Vilnius');
-  const destinations = idea.url ? [[idea.link, idea.url], ['Open map', map]] : [['Open map', map]];
+  const destinations = idea.url ? [[idea.link, idea.url]] : [];
+  if (idea.place) {
+    const map = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(idea.place + ', Vilnius');
+    destinations.push(['Open map', map]);
+  }
   for (const [label, url] of destinations) {
     const link = document.createElement('a');
     link.className = 'button secondary';
@@ -285,3 +299,31 @@ surprise.addEventListener('click', () => {
   openDetails(idea);
 });
 render();
+
+
+async function loadDailyEvents() {
+  try {
+    const response = await fetch('./daily-events.json', { cache: 'no-cache' });
+    if (!response.ok) return;
+    const snapshot = await response.json();
+    const updatedAt = new Date(snapshot.updatedAt);
+    if (!Array.isArray(snapshot.events) || Number.isNaN(updatedAt.getTime())) return;
+
+    const events = snapshot.events.map(event => {
+      const start = new Date(event.startsOn);
+      const end = new Date(event.endsOn);
+      const time = event.startsOn === event.endsOn
+        ? displayDay.format(start)
+        : displayDay.formatRange(start, end);
+      return { ...event, time };
+    });
+    const firstEvent = ideas.findIndex(idea => idea.category === 'event');
+    ideas.splice(firstEvent, 0, ...events);
+    eventsUpdatedAt = updatedAt;
+    render();
+  } catch {
+    // The built-in suggestions remain available if the calendar cannot load.
+  }
+}
+
+loadDailyEvents();

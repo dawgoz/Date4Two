@@ -1,0 +1,33 @@
+name: Refresh Vilnius events
+
+on:
+  schedule:
+    - cron: '17 4 * * *'
+      timezone: Europe/Vilnius
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-vilnius-events
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch upcoming events
+        run: python3 scripts/refresh_events.py
+      - name: Publish the refreshed data to GitHub
+        run: |
+          git add daily-events.json
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m "Refresh Vilnius events"
+          git pull --rebase
+          git push

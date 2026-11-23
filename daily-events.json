@@ -1,0 +1,85 @@
+{
+  "updatedAt": "2026-11-23T10:54:27.418244+00:00",
+  "events": [
+    {
+      "id": "vilnius-events-lt-vilniaus-performanso-meno-bienal",
+      "category": "event",
+      "title": "Vilnius Biennial of Performance Art",
+      "url": "https://www.vilnius-events.lt/en/event/lt-vilniaus-performanso-meno-bienal/",
+      "link": "Official event details",
+      "area": "Various venues",
+      "place": null,
+      "oldTown": false,
+      "startsOn": "2026-11-19",
+      "endsOn": "2026-11-29",
+      "cost": "Check listing",
+      "summary": "Festivals · Theatre",
+      "plan": "Check the Vilnius Events listing for the venue, event time and ticket details.",
+      "weather": [],
+      "seasons": [
+        "autumn"
+      ]
+    },
+    {
+      "id": "vilnius-events-audiovisual-story-let-vilnius-recharge-you-at-the-vilnius-tourist-information-centre",
+      "category": "event",
+      "title": "Audiovisual Story “Let Vilnius Recharge You” at the Vilnius Tourist Information Centre",
+      "url": "https://www.vilnius-events.lt/en/event/audiovisual-story-let-vilnius-recharge-you-at-the-vilnius-tourist-information-centre/",
+      "link": "Official event details",
+      "area": "Vilnius Tourist Information Centre",
+      "place": "Vilnius Tourist Information Centre",
+      "oldTown": false,
+      "startsOn": "2026-09-27",
+      "endsOn": "2027-12-31",
+      "cost": "Free",
+      "summary": "Free Admission · For Families",
+      "plan": "Check the Vilnius Events listing for the venue, event time and ticket details.",
+      "weather": [],
+      "seasons": [
+        "autumn",
+        "spring",
+        "summer",
+        "winter"
+      ]
+    },
+    {
+      "id": "vilnius-events-christmas-in-vilnius-2",
+      "category": "event",
+      "title": "Christmas in Vilnius 2026",
+      "url": "https://www.vilnius-events.lt/en/event/christmas-in-vilnius-2/",
+      "link": "Official event details",
+      "area": "Various venues",
+      "place": null,
+      "oldTown": false,
+      "startsOn": "2026-11-28",
+      "endsOn": "2027-01-06",
+      "cost": "Free",
+      "summary": "Festivals · Christmas in Vilnius",
+      "plan": "Check the Vilnius Events listing for the venue, event time and ticket details.",
+      "weather": [],
+      "seasons": [
+        "autumn",
+        "winter"
+      ]
+    },
+    {
+      "id": "vilnius-events-slowest-christmas-marathon",
+      "category": "event",
+      "title": "Slowest Christmas Marathon",
+      "url": "https://www.vilnius-events.lt/en/event/slowest-christmas-marathon/",
+      "link": "Official event details",
+      "area": "Various venues",
+      "place": null,
+      "oldTown": false,
+      "startsOn": "2026-12-12",
+      "endsOn": "2026-12-12",
+      "cost": "Free",
+      "summary": "Festivals · Christmas in Vilnius",
+      "plan": "Check the Vilnius Events listing for the venue, event time and ticket details.",
+      "weather": [],
+      "seasons": [
+        "winter"
+      ]
+    }
+  ]
+}
