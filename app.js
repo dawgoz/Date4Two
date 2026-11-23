@@ -1,5 +1,6 @@
 const categories = {
   all: 'All ideas',
+  plan: 'Ready-made dates',
   walk: 'Walks',
   hike: 'Hiking trails',
   cinema: 'Cinema',
@@ -57,6 +58,7 @@ const ideas = [
   },
   {
     seasons: ['autumn', 'winter'], weather: ['cold'],
+    startsOn: '2026-11-28', endsOn: '2026-12-27', settings: ['outdoors'],
     id: 'christmas', category: 'event', title: 'Christmas market for two', area: 'Old Town', oldTown: true,
     time: '28 Nov–27 Dec 2026', cost: 'Free to browse', place: 'Cathedral Square',
     summary: 'Meet under the lights in Cathedral Square and pick a warm drink for each other.',
@@ -100,6 +102,7 @@ const ideas = [
     plan: 'Meet near Town Hall Square and wander until you find a spot with two seats. If the weather is good, take your order to go and stroll along the side streets.',
   },
   ...cityIdeas,
+  ...datePlans,
 ];
 
 const filters = document.querySelector('#filters');
@@ -107,12 +110,27 @@ const cards = document.querySelector('#cards');
 const oldTown = document.querySelector('#old-town');
 const season = document.querySelector('#season');
 const temperature = document.querySelector('#temperature');
+const when = document.querySelector('#when');
+const pickedDate = document.querySelector('#picked-date');
+const setting = document.querySelector('#setting');
+const shortlistTools = document.querySelector('#shortlist-tools');
+const shareButton = document.querySelector('#share-shortlist');
+const saveShortlist = document.querySelector('#save-shortlist');
+const shareStatus = document.querySelector('#share-status');
+const shareUrl = document.querySelector('#share-url');
+const pageUrl = new URL(location.href);
+const sharedValue = pageUrl.searchParams.get('shortlist');
+const sharedIds = new Set(sharedValue?.split(',').filter(id => /^[a-z0-9-]{1,200}$/.test(id)).slice(0, 40));
+let sharedOnly = sharedIds.size > 0;
 const clearFilters = document.querySelector('#clear-filters');
 const sourceLinks = document.querySelector('#source-links');
 const savedButton = document.querySelector('#saved');
 const dialog = document.querySelector('#details');
 const surprise = document.querySelector('#surprise');
 const eventDay = new Intl.DateTimeFormat('sv-SE', { timeZone: 'Europe/Vilnius' });
+const vilniusTime = new Intl.DateTimeFormat('en-GB', {
+  timeZone: 'Europe/Vilnius', hour: '2-digit', minute: '2-digit', hourCycle: 'h23',
+});
 const displayDay = new Intl.DateTimeFormat('en-GB', {
   day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC',
 });
@@ -146,29 +164,71 @@ function active(idea) {
   return !idea.expires || idea.expires > Date.now();
 }
 
+function dateWindow(now) {
+  const today = eventDay.format(now);
+  if (when.value === 'tonight') return [today, today];
+  if (when.value === 'date' && pickedDate.value) return [pickedDate.value, pickedDate.value];
+  if (when.value !== 'weekend') return null;
+
+  const saturday = new Date(today + 'T00:00:00Z');
+  const weekday = saturday.getUTCDay();
+  if (weekday === 0) saturday.setUTCDate(saturday.getUTCDate() - 1);
+  else saturday.setUTCDate(saturday.getUTCDate() + 6 - weekday);
+  const start = saturday.toISOString().slice(0, 10);
+  saturday.setUTCDate(saturday.getUTCDate() + 1);
+  return [start, saturday.toISOString().slice(0, 10)];
+}
+
+function fitsDate(idea, window, eveningStart) {
+  if (!window) return true;
+  if (!idea.startsOn) return idea.category !== 'event' && !idea.expires;
+  const [start, end] = window;
+  if (idea.startsOn > end || idea.endsOn < start) return false;
+  return !eveningStart || !idea.startTime || idea.startsOn !== idea.endsOn || idea.startTime >= eveningStart;
+}
+
+function fitsSetting(idea) {
+  if (!setting.value) return true;
+  const defaults = {
+    cinema: ['indoors'], art: ['indoors'], food: ['indoors'],
+    hike: ['outdoors'], walk: ['outdoors'], fun: ['outdoors'],
+  };
+  return (idea.settings ?? defaults[idea.category] ?? []).includes(setting.value);
+}
+
 function matchingIdeas() {
+  const now = new Date();
+  const window = dateWindow(now);
+  const eveningStart = when.value === 'tonight' ? [vilniusTime.format(now), '17:00'].sort().at(-1) : null;
   return ideas.filter(idea => active(idea)
     && (category === 'all' || idea.category === category)
     && (!oldTown.checked || idea.oldTown)
     && (!season.value || !idea.seasons || idea.seasons.includes(season.value))
     && (!temperature.value || (idea.weather ?? ['hot', 'cold']).includes(temperature.value))
-    && (!savedOnly || saved.has(idea.id)));
+    && fitsDate(idea, window, eveningStart)
+    && fitsSetting(idea)
+    && (!savedOnly || saved.has(idea.id))
+    && (!sharedOnly || sharedIds.has(idea.id)));
 }
 
 function toggleSaved(id, button) {
   if (saved.has(id)) saved.delete(id);
   else saved.add(id);
-  try {
-    localStorage.setItem('vilnius-for-two-saved', JSON.stringify([...saved]));
-  } catch {
-    // Browsing restrictions may limit saves to this visit.
-  }
+  persistSaved();
   if (savedOnly) {
     render();
     (cards.querySelector('.heart') || savedButton).focus();
   } else {
     updateHeart(button, ideas.find(idea => idea.id === id));
     updateSavedCount();
+  }
+}
+
+function persistSaved() {
+  try {
+    localStorage.setItem('vilnius-for-two-saved', JSON.stringify([...saved]));
+  } catch {
+    // Browsing restrictions may limit saves to this visit.
   }
 }
 
@@ -185,10 +245,16 @@ function updateSavedCount() {
 
 function render() {
   const matches = matchingIdeas();
-  clearFilters.hidden = !oldTown.checked && !season.value && !temperature.value && category === 'all';
+  clearFilters.hidden = !oldTown.checked && !season.value && !temperature.value && !setting.value && !when.value && category === 'all';
+  document.querySelector('#picked-date-label').hidden = when.value !== 'date';
+  document.querySelector('#date-note').hidden = !dateWindow(new Date());
+  shortlistTools.hidden = !savedOnly && !sharedOnly;
+  shareButton.disabled = !ideas.some(idea => active(idea) && saved.has(idea.id)) && !sharedOnly;
+  saveShortlist.hidden = !sharedOnly;
+  saveShortlist.disabled = !ideas.some(idea => active(idea) && sharedIds.has(idea.id) && !saved.has(idea.id));
   sourceLinks.replaceChildren();
   for (const [kind, label, url] of fullListings) {
-    if (savedOnly || (category !== 'all' && category !== kind)) continue;
+    if (savedOnly || sharedOnly || (category !== 'all' && category !== kind)) continue;
     const link = document.createElement('a');
     link.textContent = label;
     link.href = url;
@@ -206,7 +272,7 @@ function render() {
     button.setAttribute('aria-pressed', String(button.dataset.filter === category));
   }
   savedButton.setAttribute('aria-pressed', String(savedOnly));
-  document.querySelector('#ideas-title').textContent = savedOnly ? 'Saved dates' : 'Find your next date';
+  document.querySelector('#ideas-title').textContent = sharedOnly ? 'Shared shortlist' : savedOnly ? 'Saved dates' : 'Find your next date';
   document.querySelector('#results').textContent = matches.length + (matches.length === 1 ? ' date idea' : ' date ideas');
   updateSavedCount();
   cards.replaceChildren();
@@ -217,7 +283,17 @@ function render() {
     card.querySelector('.category').textContent = categories[idea.category];
     card.querySelector('h3').textContent = idea.title;
     card.querySelector('p').textContent = idea.summary;
-    card.querySelector('.meta').textContent = [idea.area, idea.time, idea.cost].join(' · ');
+    card.querySelector('.meta').textContent = [idea.area, idea.time, idea.cost, idea.distance].filter(Boolean).join(' · ');
+    if (trailDetails[idea.id]) {
+      card.querySelector('.meta').after(trailFacts(idea));
+      const route = document.createElement('a');
+      route.className = 'text-button trail-link';
+      route.textContent = 'Open trail guide';
+      route.href = idea.url;
+      route.target = '_blank';
+      route.rel = 'noopener noreferrer';
+      card.querySelector('.text-button').before(route);
+    }
     const heart = card.querySelector('.heart');
     updateHeart(heart, idea);
     heart.addEventListener('click', () => toggleSaved(idea.id, heart));
@@ -230,12 +306,27 @@ function render() {
   if (!matches.length) {
     const message = document.createElement('p');
     message.className = 'empty';
-    message.textContent = savedOnly
+    message.textContent = sharedOnly
+      ? 'No available dates match this shortlist and its filters.'
+      : savedOnly
       ? 'No saved dates match these filters. Try All ideas or tap a heart while browsing.'
       : 'No date ideas match these filters. Try clearing a filter to see more of Vilnius.';
     cards.append(message);
   }
   surprise.disabled = !matches.length;
+}
+
+function trailFacts(idea) {
+  const facts = document.createElement('dl');
+  facts.className = 'trail-facts';
+  for (const [key, label] of [['distance', 'Distance'], ['difficulty', 'Difficulty'], ['type', 'Route'], ['start', 'Start']]) {
+    const term = document.createElement('dt');
+    const value = document.createElement('dd');
+    term.textContent = label;
+    value.textContent = trailDetails[idea.id][key];
+    facts.append(term, value);
+  }
+  return facts;
 }
 
 function openDetails(idea) {
@@ -244,10 +335,24 @@ function openDetails(idea) {
   content.innerHTML = '<span class="category"></span><h2 id="detail-title"></h2><p class="meta"></p><p class="plan"></p><div class="detail-links"></div>';
   content.querySelector('.category').textContent = categories[idea.category];
   content.querySelector('h2').textContent = idea.title;
-  content.querySelector('.meta').textContent = [idea.area, idea.time, idea.cost].join(' · ');
+  content.querySelector('.meta').textContent = [idea.area, idea.time, idea.cost, idea.distance].filter(Boolean).join(' · ');
   content.querySelector('.plan').textContent = idea.plan;
   const links = content.querySelector('.detail-links');
+  if (trailDetails[idea.id]) links.before(trailFacts(idea));
   const destinations = idea.url ? [[idea.link, idea.url]] : [];
+  if (idea.stops) {
+    const stops = document.createElement('ol');
+    for (const stop of idea.stops) {
+      const item = document.createElement('li');
+      item.textContent = stop;
+      stops.append(item);
+    }
+    links.before(stops);
+    const directions = new URLSearchParams({
+      api: '1', origin: idea.stops[0] + ', Vilnius', destination: idea.stops.at(-1) + ', Vilnius', travelmode: 'walking',
+    });
+    destinations.push(['Walking directions', 'https://www.google.com/maps/dir/?' + directions]);
+  }
   if (idea.place) {
     const map = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(idea.place + ', Vilnius');
     destinations.push(['Open map', map]);
@@ -265,6 +370,7 @@ function openDetails(idea) {
 }
 
 savedButton.addEventListener('click', () => {
+  leaveShared();
   savedOnly = !savedOnly;
   category = 'all';
   resetFilters();
@@ -272,19 +378,72 @@ savedButton.addEventListener('click', () => {
   document.querySelector('#ideas').scrollIntoView();
 });
 document.querySelector('nav a').addEventListener('click', () => {
-  if (savedOnly) {
+  if (savedOnly || sharedOnly) {
+    leaveShared();
     savedOnly = false;
     render();
   }
 });
+function leaveShared() {
+  sharedOnly = false;
+  if (!pageUrl.searchParams.has('shortlist')) return;
+  pageUrl.searchParams.delete('shortlist');
+  history.replaceState(null, '', pageUrl);
+}
+
 function resetFilters() {
   category = 'all';
   oldTown.checked = false;
   season.value = '';
   temperature.value = '';
+  setting.value = '';
+  when.value = '';
+  pickedDate.value = '';
+  shareStatus.textContent = '';
+  shareUrl.hidden = true;
 }
 
-for (const input of [oldTown, season, temperature]) input.addEventListener('change', render);
+for (const input of [oldTown, season, temperature, setting, pickedDate]) input.addEventListener('change', render);
+when.addEventListener('change', () => {
+  if (when.value === 'date' && !pickedDate.value) pickedDate.value = eventDay.format(new Date());
+  render();
+  if (when.value === 'date') pickedDate.focus();
+});
+document.querySelector('#browse-plans').addEventListener('click', () => {
+  leaveShared();
+  savedOnly = false;
+  resetFilters();
+  category = 'plan';
+  render();
+});
+shareButton.addEventListener('click', async () => {
+  const url = new URL(location.href);
+  const ids = sharedOnly ? [...sharedIds] : ideas.filter(idea => active(idea) && saved.has(idea.id)).map(idea => idea.id);
+  url.searchParams.set('shortlist', ids.slice(0, 40).join(','));
+  url.hash = 'ideas';
+  try {
+    await navigator.clipboard.writeText(url.href);
+    shareUrl.hidden = true;
+    shareStatus.textContent = ids.length > 40 ? 'Link copied with the first 40 ideas.' : 'Shortlist link copied.';
+  } catch {
+    shareUrl.value = url.href;
+    shareUrl.hidden = false;
+    shareUrl.focus();
+    shareUrl.select();
+    shareStatus.textContent = 'Copy the selected link.';
+  }
+});
+saveShortlist.addEventListener('click', () => {
+  const available = ideas.filter(idea => active(idea) && sharedIds.has(idea.id));
+  for (const idea of available) saved.add(idea.id);
+  persistSaved();
+  leaveShared();
+  savedOnly = true;
+  resetFilters();
+  render();
+  shareStatus.textContent = 'Available ideas saved.';
+  shareButton.focus();
+});
 clearFilters.addEventListener('click', () => {
   resetFilters();
   render();
@@ -298,8 +457,8 @@ surprise.addEventListener('click', () => {
   lastSurprise = idea.id;
   openDetails(idea);
 });
+pickedDate.min = eventDay.format(new Date());
 render();
-
 
 async function loadDailyEvents() {
   try {
@@ -315,7 +474,7 @@ async function loadDailyEvents() {
       const time = event.startsOn === event.endsOn
         ? displayDay.format(start)
         : displayDay.formatRange(start, end);
-      return { ...event, time };
+      return { ...event, time: [time, event.startTime].filter(Boolean).join(' · ') };
     });
     const firstEvent = ideas.findIndex(idea => idea.category === 'event');
     ideas.splice(firstEvent, 0, ...events);

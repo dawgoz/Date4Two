@@ -20,7 +20,7 @@
       <div class="eyebrow">VILNIUS, LITHUANIA</div>
       <h1 id="hero-title">A little more<br><em>time for two.</em></h1>
       <p>From sunset walks to late-night films, find a date you’ll both look forward to across Vilnius, from the Old Town to the forest trails.</p>
-      <div class="hero-actions"><a class="button primary" href="#ideas">Browse ideas</a><button class="button secondary" type="button" id="surprise"><span aria-hidden="true">✧</span> Surprise us</button></div>
+      <div class="hero-actions"><a class="button primary" href="#ideas">Browse ideas</a><a class="button secondary" href="#ideas" id="browse-plans">Ready-made dates</a><button class="button secondary" type="button" id="surprise"><span aria-hidden="true">✧</span> Surprise us</button></div>
     </div>
     <figure class="hero-photo"><img src="./vilnius.jpg" alt="Church spires and rooftops over Vilnius Old Town at dusk"><figcaption>VILNIUS OLD TOWN AT DUSK</figcaption></figure>
   </section>
@@ -31,6 +31,18 @@
     </div>
     <div class="filters" id="filters" aria-label="Filter by category"></div>
     <div class="weather-filters">
+      <label>When <select id="when">
+        <option value="">Any date</option>
+        <option value="tonight">Tonight</option>
+        <option value="weekend">This weekend</option>
+        <option value="date">Pick a date</option>
+      </select></label>
+      <label id="picked-date-label" hidden>Date in Vilnius <input type="date" id="picked-date"></label>
+      <label>Setting <select id="setting">
+        <option value="">Any setting</option>
+        <option value="indoors">Indoors</option>
+        <option value="outdoors">Outdoors</option>
+      </select></label>
       <label>Season <select id="season">
         <option value="">Any season</option>
         <option value="winter">Winter</option>
@@ -44,6 +56,13 @@
         <option value="cold">Cold days</option>
       </select></label>
       <button class="text-button" type="button" id="clear-filters" hidden>Clear filters</button>
+    </div>
+    <p id="date-note" class="filter-note" hidden>Check opening hours and showtimes for flexible ideas.</p>
+    <div id="shortlist-tools" class="shortlist-tools" hidden>
+      <button class="button secondary" type="button" id="share-shortlist">Copy shortlist link</button>
+      <button class="button secondary" type="button" id="save-shortlist" hidden>Save available ideas</button>
+      <input id="share-url" type="url" aria-label="Shortlist link" readonly hidden>
+      <span id="share-status" role="status"></span>
     </div>
     <aside id="source-links" aria-label="Full listings" hidden></aside>
     <div class="cards" id="cards"></div>

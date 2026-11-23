@@ -118,6 +118,7 @@ def listings(page, today):
             continue
         key = f"https://www.vilnius-events.lt{url.path}"
         venue = card.get("venue", "")
+        clock = next((part.strip() for part in card["text"] if re.fullmatch(r"(?:[01]\d|2[0-3]):[0-5]\d", part.strip())), None)
         by_url[key] = {
             "id": "vilnius-events-" + url.path.rstrip("/").rsplit("/", 1)[-1],
             "category": "event",
@@ -129,6 +130,7 @@ def listings(page, today):
             "oldTown": venue.casefold() in OLD_TOWN_VENUES,
             "startsOn": start.isoformat(),
             "endsOn": end.isoformat(),
+            "startTime": clock if start == end else None,
             "cost": card.get("cost") or "Check listing",
             "summary": " · ".join(card["tags"]) or "From the Vilnius Events calendar",
             "plan": "Check the Vilnius Events listing for the venue, event time and ticket details.",

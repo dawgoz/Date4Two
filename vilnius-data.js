@@ -48,6 +48,7 @@ const cityIdeas = [
     url: 'https://www.govilnius.lt/visit-vilnius/latest-tips/activities-in-vilnius-for-people-who-like-to-move', link: 'Explore riverside routes',
   },
   {
+    startsOn: '2027-01-22', endsOn: '2027-01-24', settings: ['outdoors'],
     id: 'light-festival', category: 'event', title: 'Vilnius Light Festival', area: 'Old Town', oldTown: true,
     time: '22–24 Jan 2027', cost: 'Check programme', place: 'Vilnius Old Town',
     seasons: ['winter'], weather: ['cold'], expires: Date.parse('2027-01-25T00:00:00+02:00'),
@@ -56,6 +57,7 @@ const cityIdeas = [
     url: 'https://lightfestival.lt/en/', link: 'Official festival programme',
   },
   {
+    startsOn: '2027-03-05', endsOn: '2027-03-07', settings: ['outdoors'],
     id: 'kaziukas', category: 'event', title: 'Kaziukas Fair', area: 'City centre', oldTown: false,
     time: '5–7 Mar 2027', cost: 'Free to browse', place: 'Gedimino prospektas Vilnius',
     seasons: ['spring'], weather: ['cold'], expires: Date.parse('2027-03-08T00:00:00+02:00'),
@@ -64,6 +66,7 @@ const cityIdeas = [
     url: 'https://www.govilnius.lt/visit-vilnius/latest-tips/vilniuss-biggest-events', link: 'Go Vilnius event details',
   },
   {
+    startsOn: '2027-05-28', endsOn: '2027-05-30', settings: ['outdoors'],
     id: 'pink-soup', category: 'event', title: 'Vilnius Pink Soup Fest', area: 'Across Vilnius', oldTown: false,
     time: '28–30 May 2027', cost: 'Free to browse', place: 'Vilnius',
     seasons: ['spring'], weather: ['hot'], expires: Date.parse('2027-05-31T00:00:00+03:00'),
@@ -72,6 +75,7 @@ const cityIdeas = [
     url: 'https://www.govilnius.lt/visit-vilnius/latest-tips/vilniuss-biggest-events', link: 'Go Vilnius event details',
   },
   {
+    startsOn: '2027-06-12', endsOn: '2027-06-12', settings: ['indoors', 'outdoors'],
     id: 'culture-night', category: 'event', title: 'Culture Night', area: 'Across Vilnius', oldTown: false,
     time: '12 Jun 2027', cost: 'Check programme', place: 'Vilnius',
     seasons: ['summer'], weather: ['hot'], expires: Date.parse('2027-06-13T00:00:00+03:00'),
@@ -112,3 +116,38 @@ for (const [id, title, genre, url] of forumSnapshot) {
     url, link: 'Check Forum Cinemas',
   });
 }
+
+const trailDetails = {
+  puckoriai: { distance: 'About 6 km', difficulty: 'Moderate', type: 'Loop', start: 'Pūčkoriai overlook' },
+  'vingis-loop': { distance: 'Varies with the loop', difficulty: 'Easy', type: 'Loop', start: 'M. K. Čiurlionio Street entrance' },
+  'vilnius-100': { distance: '100 km total', difficulty: 'Varies by section', type: 'Circular trail', start: 'Table Hill or a chosen section' },
+  'hill-loop': { distance: 'Varies with the descent', difficulty: 'Moderate', type: 'Point to point', start: 'Stalo kalnas' },
+};
+
+const datePlans = [
+  {
+    id: 'plan-pasaka', category: 'plan', title: 'Pasaka and a drink in Old Town',
+    area: 'Old Town', oldTown: true, settings: ['indoors'], time: '2–3 hours',
+    cost: 'Film ticket + drink per person', distance: 'Under 1 km on foot',
+    summary: 'Pick an indie film, then trade favourite scenes over a drink around Town Hall Square.',
+    plan: 'Choose a screening at Old Town Pasaka and allow time afterward to find a table near the square.',
+    stops: ['Old Town Pasaka', 'Vilnius Town Hall Square'],
+    url: 'https://pasaka.lt/en', link: 'Check Pasaka showtimes',
+  },
+  {
+    id: 'plan-garden', category: 'plan', title: 'Bernardine Garden and dinner in Paupys',
+    area: 'Old Town to Paupys', oldTown: false, settings: ['indoors', 'outdoors'],
+    time: '2–3 hours', cost: 'Free walk + food hall meal', distance: 'About 1.5 km on foot',
+    summary: 'Follow the Vilnelė from the garden, then share a few dishes at Paupys Market.',
+    plan: 'Meet at Bernardine Garden, follow the river toward Paupys, then each choose something to share.',
+    stops: ['Bernardine Garden', 'Paupys Market'],
+  },
+  {
+    id: 'plan-literatu', category: 'plan', title: 'A photo hunt and a pastry swap',
+    area: 'Old Town', oldTown: true, settings: ['indoors', 'outdoors'],
+    time: '1–1.5 hours', cost: 'Free walk + coffee and pastry', distance: 'Under 1 km on foot',
+    summary: 'Find details on Literatų Street, then compare your photos over coffee near Stiklių Street.',
+    plan: 'Meet at Literatų Street. Choose three photo prompts, then head toward Stiklių Street and pick a café.',
+    stops: ['Literatų gatvė', 'Stiklių gatvė'],
+  },
+];

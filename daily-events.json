@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T10:54:27.418244+00:00",
+  "updatedAt": "2026-11-23T11:07:31.958702+00:00",
   "events": [
     {
       "id": "vilnius-events-lt-vilniaus-performanso-meno-bienal",
@@ -12,6 +12,7 @@
       "oldTown": false,
       "startsOn": "2026-11-19",
       "endsOn": "2026-11-29",
+      "startTime": null,
       "cost": "Check listing",
       "summary": "Festivals · Theatre",
       "plan": "Check the Vilnius Events listing for the venue, event time and ticket details.",
@@ -31,6 +32,7 @@
       "oldTown": false,
       "startsOn": "2026-09-27",
       "endsOn": "2027-12-31",
+      "startTime": null,
       "cost": "Free",
       "summary": "Free Admission · For Families",
       "plan": "Check the Vilnius Events listing for the venue, event time and ticket details.",
@@ -53,6 +55,7 @@
       "oldTown": false,
       "startsOn": "2026-11-28",
       "endsOn": "2027-01-06",
+      "startTime": null,
       "cost": "Free",
       "summary": "Festivals · Christmas in Vilnius",
       "plan": "Check the Vilnius Events listing for the venue, event time and ticket details.",
@@ -73,6 +76,7 @@
       "oldTown": false,
       "startsOn": "2026-12-12",
       "endsOn": "2026-12-12",
+      "startTime": "12:00",
       "cost": "Free",
       "summary": "Festivals · Christmas in Vilnius",
       "plan": "Check the Vilnius Events listing for the venue, event time and ticket details.",

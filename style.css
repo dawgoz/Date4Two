@@ -107,3 +107,22 @@ dialog form { display: flex; justify-content: end; }
 #source-links { display: flex; flex-wrap: wrap; gap: 9px 18px; margin-bottom: 20px; color: var(--wine); font-size: .9rem; }
 #source-links[hidden] { display: none; }
 [data-category=hike] .category { background: #e8eddf; color: #394c30; }
+
+.weather-filters input[type=date], #share-url {
+  font: inherit;
+  color: var(--ink);
+  background: #fffdfa;
+  border: 1px solid var(--edge);
+  border-radius: 7px;
+  min-height: 42px;
+  padding: 8px 11px;
+}
+.weather-filters label[hidden], .shortlist-tools[hidden] { display: none; }
+.shortlist-tools { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; }
+#share-url { flex: 1 1 240px; min-width: 0; }
+.filter-note, #share-status { color: var(--muted); font-size: .9rem; }
+.trail-facts { display: grid; grid-template-columns: max-content 1fr; gap: 4px 10px; margin: 12px 0 0; font-size: .88rem; }
+.trail-facts dt { font-weight: 700; }
+.trail-facts dd { margin: 0; color: var(--muted); }
+.trail-link { display: inline-block; }
+[data-category=plan] .category { background: #f1e3e5; color: #67303d; }
