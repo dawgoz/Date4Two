@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Find your next date in and around Vilnius Old Town, from hilltop walks to indie cinema.">
+<title>Vilnius for Two — Date ideas in Vilnius</title>
+<link rel="stylesheet" href="./style.css">
+<script src="./vilnius-data.js" defer></script>
+<script src="./app.js" defer></script>
+</head>
+<body>
+<header class="shell masthead">
+  <a class="wordmark" href="./"><span aria-hidden="true">♥</span> Vilnius for Two</a>
+  <nav aria-label="Main navigation"><a href="#ideas">Explore</a><button type="button" id="saved" aria-pressed="false">♡ <span>Saved</span><span id="saved-count"></span></button></nav>
+</header>
+<main>
+  <section class="shell hero" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <div class="eyebrow">VILNIUS, LITHUANIA</div>
+      <h1 id="hero-title">A little more<br><em>time for two.</em></h1>
+      <p>From sunset walks to late-night films, find a date you’ll both look forward to across Vilnius, from the Old Town to the forest trails.</p>
+      <div class="hero-actions"><a class="button primary" href="#ideas">Browse ideas</a><button class="button secondary" type="button" id="surprise"><span aria-hidden="true">✧</span> Surprise us</button></div>
+    </div>
+    <figure class="hero-photo"><img src="./vilnius.jpg" alt="Church spires and rooftops over Vilnius Old Town at dusk"><figcaption>VILNIUS OLD TOWN AT DUSK</figcaption></figure>
+  </section>
+  <section class="shell ideas" id="ideas" aria-labelledby="ideas-title">
+    <div class="section-head">
+      <div><h2 id="ideas-title">Find your next date</h2><p id="results" role="status"></p></div>
+      <label class="check"><input type="checkbox" id="old-town"> Old Town only</label>
+    </div>
+    <div class="filters" id="filters" aria-label="Filter by category"></div>
+    <div class="weather-filters">
+      <label>Season <select id="season">
+        <option value="">Any season</option>
+        <option value="winter">Winter</option>
+        <option value="spring">Spring</option>
+        <option value="summer">Summer</option>
+        <option value="autumn">Autumn</option>
+      </select></label>
+      <label>Weather <select id="temperature">
+        <option value="">Any temperature</option>
+        <option value="hot">Hot days</option>
+        <option value="cold">Cold days</option>
+      </select></label>
+      <button class="text-button" type="button" id="clear-filters" hidden>Clear filters</button>
+    </div>
+    <aside id="source-links" aria-label="Full listings" hidden></aside>
+    <div class="cards" id="cards"></div>
+  </section>
+</main>
+<footer class="shell footer"><span>Vilnius for Two</span><span><a href="https://commons.wikimedia.org/wiki/File:Vilnius_Old_Town_Skyline_at_dusk,_Lithuania_-_Diliff.jpg">Photo by David Iliff</a> · <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> · resized</span></footer>
+<dialog id="details" aria-labelledby="detail-title">
+  <form method="dialog"><button class="close" aria-label="Close details">×</button></form>
+  <div id="detail-content"></div>
+</dialog>
+<template id="card">
+  <article class="card">
+    <div class="card-top"><span class="category"></span><button type="button" class="heart" aria-pressed="false"></button></div>
+    <h3></h3><p></p><div class="meta"></div><button type="button" class="text-button">Date details</button>
+  </article>
+</template>
+</body>
+</html>
