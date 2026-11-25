@@ -1,209 +1,6 @@
 {
-  "updatedAt": "2026-11-24T12:37:33.855471+00:00",
+  "updatedAt": "2026-11-25T11:26:57.157766+00:00",
   "events": [
-    {
-      "id": "vilnius-events-lt-juoda-balta-2",
-      "category": "event",
-      "title": "BLACK–WHITE",
-      "url": "https://www.vilnius-events.lt/en/event/lt-juoda-balta-2/",
-      "link": "Official event details",
-      "area": "Arts Printing House",
-      "place": "Arts Printing House",
-      "oldTown": false,
-      "startsOn": "2026-11-24",
-      "endsOn": "2026-11-24",
-      "startTime": "18:30",
-      "cost": "25-30 €",
-      "summary": "Theatre",
-      "plan": "Check the Vilnius Events listing for the venue, event time and ticket details.",
-      "weather": [],
-      "seasons": [
-        "autumn"
-      ]
-    },
-    {
-      "id": "vilnius-events-lt-vakarien-skambant-d-iazui-piano-jazz-3",
-      "category": "event",
-      "title": "Dinner with Jazz • Piano Jazz",
-      "url": "https://www.vilnius-events.lt/en/event/lt-vakarien-skambant-d-iazui-piano-jazz-3/",
-      "link": "Official event details",
-      "area": "Bar “Veranda”",
-      "place": "Bar “Veranda”",
-      "oldTown": false,
-      "startsOn": "2026-11-24",
-      "endsOn": "2026-11-24",
-      "startTime": "19:00",
-      "cost": "Free",
-      "summary": "Concerts · Free Admission",
-      "plan": "Check the Vilnius Events listing for the venue, event time and ticket details.",
-      "weather": [],
-      "seasons": [
-        "autumn"
-      ]
-    },
-    {
-      "id": "vilnius-events-international-seminar-fictocritical-writing-in-contemporary-art",
-      "category": "event",
-      "title": "International Seminar ‘Fictocritical Writing in Contemporary Art’",
-      "url": "https://www.vilnius-events.lt/en/event/international-seminar-fictocritical-writing-in-contemporary-art/",
-      "link": "Official event details",
-      "area": "Reading-room of Contemporary Art Centre (CAC)",
-      "place": "Reading-room of Contemporary Art Centre (CAC)",
-      "oldTown": false,
-      "startsOn": "2026-11-24",
-      "endsOn": "2026-11-24",
-      "startTime": "13:30",
-      "cost": "Free",
-      "summary": "Conferences · Free Admission",
-      "plan": "Check the Vilnius Events listing for the venue, event time and ticket details.",
-      "weather": [],
-      "seasons": [
-        "autumn"
-      ]
-    },
-    {
-      "id": "vilnius-events-lt-be-stabd-i-domino-teatras",
-      "category": "event",
-      "title": "No Holds Barred | Domino Theatre",
-      "url": "https://www.vilnius-events.lt/en/event/lt-be-stabd-i-domino-teatras/",
-      "link": "Official event details",
-      "area": "”Domino” Theatre",
-      "place": "”Domino” Theatre",
-      "oldTown": false,
-      "startsOn": "2026-11-24",
-      "endsOn": "2026-11-24",
-      "startTime": "19:00",
-      "cost": "31.60 €",
-      "summary": "Night Activities · Theatre",
-      "plan": "Check the Vilnius Events listing for the venue, event time and ticket details.",
-      "weather": [],
-      "seasons": [
-        "autumn"
-      ]
-    },
-    {
-      "id": "vilnius-events-open-day-la-fran-aise-at-french-lyc-e-of-vilnius",
-      "category": "event",
-      "title": "Open Day à la française at French Lycée of Vilnius!",
-      "url": "https://www.vilnius-events.lt/en/event/open-day-la-fran-aise-at-french-lyc-e-of-vilnius/",
-      "link": "Official event details",
-      "area": "Vilnius",
-      "place": "Vilnius",
-      "oldTown": false,
-      "startsOn": "2026-11-24",
-      "endsOn": "2026-11-24",
-      "startTime": "17:00",
-      "cost": "Free",
-      "summary": "Educations · For Families",
-      "plan": "Check the Vilnius Events listing for the venue, event time and ticket details.",
-      "weather": [],
-      "seasons": [
-        "autumn"
-      ]
-    },
-    {
-      "id": "vilnius-events-lt-k-nas-kaip-instrumentas-s-skambis-k-rybin-garso-praktika",
-      "category": "event",
-      "title": "The Body as an Instrument | “Sąskambis” – A Creative Sound Practice",
-      "url": "https://www.vilnius-events.lt/en/event/lt-k-nas-kaip-instrumentas-s-skambis-k-rybin-garso-praktika/",
-      "link": "Official event details",
-      "area": "Lietuvos kompozitorių sąjunga",
-      "place": "Lietuvos kompozitorių sąjunga",
-      "oldTown": false,
-      "startsOn": "2026-11-24",
-      "endsOn": "2026-11-24",
-      "startTime": "18:00",
-      "cost": "20 €",
-      "summary": "Educations · Concerts",
-      "plan": "Check the Vilnius Events listing for the venue, event time and ticket details.",
-      "weather": [],
-      "seasons": [
-        "autumn"
-      ]
-    },
-    {
-      "id": "vilnius-events-vilnius-film-club-9-2009",
-      "category": "event",
-      "title": "Vilnius Film Club: “9” (2009)",
-      "url": "https://www.vilnius-events.lt/en/event/vilnius-film-club-9-2009/",
-      "link": "Official event details",
-      "area": "Zolak Micro Art Residence",
-      "place": "Zolak Micro Art Residence",
-      "oldTown": false,
-      "startsOn": "2026-11-24",
-      "endsOn": "2026-11-24",
-      "startTime": "18:45",
-      "cost": "Free",
-      "summary": "Free Admission",
-      "plan": "Check the Vilnius Events listing for the venue, event time and ticket details.",
-      "weather": [],
-      "seasons": [
-        "autumn"
-      ]
-    },
-    {
-      "id": "vilnius-events-wyatt-e-be-five-the-hierophant-uk",
-      "category": "event",
-      "title": "Wyatt E [BE] / Five The Hierophant [UK]",
-      "url": "https://www.vilnius-events.lt/en/event/wyatt-e-be-five-the-hierophant-uk/",
-      "link": "Official event details",
-      "area": "Kirtimai Culture Center",
-      "place": "Kirtimai Culture Center",
-      "oldTown": false,
-      "startsOn": "2026-11-24",
-      "endsOn": "2026-11-24",
-      "startTime": "20:00",
-      "cost": "20 €",
-      "summary": "Night Activities · Concerts",
-      "plan": "Check the Vilnius Events listing for the venue, event time and ticket details.",
-      "weather": [],
-      "seasons": [
-        "autumn"
-      ]
-    },
-    {
-      "id": "vilnius-events-lt-vilniaus-performanso-meno-bienal",
-      "category": "event",
-      "title": "Vilnius Biennial of Performance Art",
-      "url": "https://www.vilnius-events.lt/en/event/lt-vilniaus-performanso-meno-bienal/",
-      "link": "Official event details",
-      "area": "Various venues",
-      "place": null,
-      "oldTown": false,
-      "startsOn": "2026-11-19",
-      "endsOn": "2026-11-29",
-      "startTime": null,
-      "cost": "Check listing",
-      "summary": "Festivals · Theatre",
-      "plan": "Check the Vilnius Events listing for the venue, event time and ticket details.",
-      "weather": [],
-      "seasons": [
-        "autumn"
-      ]
-    },
-    {
-      "id": "vilnius-events-audiovisual-story-let-vilnius-recharge-you-at-the-vilnius-tourist-information-centre",
-      "category": "event",
-      "title": "Audiovisual Story “Let Vilnius Recharge You” at the Vilnius Tourist Information Centre",
-      "url": "https://www.vilnius-events.lt/en/event/audiovisual-story-let-vilnius-recharge-you-at-the-vilnius-tourist-information-centre/",
-      "link": "Official event details",
-      "area": "Vilnius Tourist Information Centre",
-      "place": "Vilnius Tourist Information Centre",
-      "oldTown": false,
-      "startsOn": "2026-09-27",
-      "endsOn": "2027-12-31",
-      "startTime": null,
-      "cost": "Free",
-      "summary": "Free Admission · For Families",
-      "plan": "Check the Vilnius Events listing for the venue, event time and ticket details.",
-      "weather": [],
-      "seasons": [
-        "autumn",
-        "spring",
-        "summer",
-        "winter"
-      ]
-    },
     {
       "id": "vilnius-events-lt-dokumentinio-filmo-premjera-vilniaus-menininkas-gitenio-umbraso-k-ryba",
       "category": "event",
@@ -365,6 +162,49 @@
       ]
     },
     {
+      "id": "vilnius-events-lt-vilniaus-performanso-meno-bienal",
+      "category": "event",
+      "title": "Vilnius Biennial of Performance Art",
+      "url": "https://www.vilnius-events.lt/en/event/lt-vilniaus-performanso-meno-bienal/",
+      "link": "Official event details",
+      "area": "Various venues",
+      "place": null,
+      "oldTown": false,
+      "startsOn": "2026-11-19",
+      "endsOn": "2026-11-29",
+      "startTime": null,
+      "cost": "Check listing",
+      "summary": "Festivals · Theatre",
+      "plan": "Check the Vilnius Events listing for the venue, event time and ticket details.",
+      "weather": [],
+      "seasons": [
+        "autumn"
+      ]
+    },
+    {
+      "id": "vilnius-events-audiovisual-story-let-vilnius-recharge-you-at-the-vilnius-tourist-information-centre",
+      "category": "event",
+      "title": "Audiovisual Story “Let Vilnius Recharge You” at the Vilnius Tourist Information Centre",
+      "url": "https://www.vilnius-events.lt/en/event/audiovisual-story-let-vilnius-recharge-you-at-the-vilnius-tourist-information-centre/",
+      "link": "Official event details",
+      "area": "Vilnius Tourist Information Centre",
+      "place": "Vilnius Tourist Information Centre",
+      "oldTown": false,
+      "startsOn": "2026-09-27",
+      "endsOn": "2027-12-31",
+      "startTime": null,
+      "cost": "Free",
+      "summary": "Free Admission · For Families",
+      "plan": "Check the Vilnius Events listing for the venue, event time and ticket details.",
+      "weather": [],
+      "seasons": [
+        "autumn",
+        "spring",
+        "summer",
+        "winter"
+      ]
+    },
+    {
       "id": "vilnius-events-lt-tarp-realybi",
       "category": "event",
       "title": "BETWEEN REALITIES",
@@ -438,6 +278,26 @@
       "startTime": "13:00",
       "cost": "Free",
       "summary": "Educations · Free Admission",
+      "plan": "Check the Vilnius Events listing for the venue, event time and ticket details.",
+      "weather": [],
+      "seasons": [
+        "autumn"
+      ]
+    },
+    {
+      "id": "vilnius-events-lt-m-e-d-blank-psichodelinio-punk-ir-funk-roko-koncertas",
+      "category": "event",
+      "title": "M.E.D & blank: A Psychedelic Punk and Funk Rock Concert",
+      "url": "https://www.vilnius-events.lt/en/event/lt-m-e-d-blank-psichodelinio-punk-ir-funk-roko-koncertas/",
+      "link": "Official event details",
+      "area": "Cultural Complex “Sodas 2123″",
+      "place": "Cultural Complex “Sodas 2123″",
+      "oldTown": false,
+      "startsOn": "2026-11-26",
+      "endsOn": "2026-11-26",
+      "startTime": "19:00",
+      "cost": "7 €",
+      "summary": "Night Activities · Concerts",
       "plan": "Check the Vilnius Events listing for the venue, event time and ticket details.",
       "weather": [],
       "seasons": [
@@ -757,6 +617,26 @@
       "endsOn": "2026-11-27",
       "startTime": "20:00",
       "cost": "5 €",
+      "summary": "Night Activities",
+      "plan": "Check the Vilnius Events listing for the venue, event time and ticket details.",
+      "weather": [],
+      "seasons": [
+        "autumn"
+      ]
+    },
+    {
+      "id": "vilnius-events-audioplaza-ohm-sweet-laxxiste-a-vladas-dieninis-brokenchord-h-ld",
+      "category": "event",
+      "title": "audioplaza /Ohm Sweet | Laxxiste A. | Vladas Dieninis | Brokenchord | Hìldå",
+      "url": "https://www.vilnius-events.lt/en/event/audioplaza-ohm-sweet-laxxiste-a-vladas-dieninis-brokenchord-h-ld/",
+      "link": "Official event details",
+      "area": "Cultural Complex “Sodas 2123″",
+      "place": "Cultural Complex “Sodas 2123″",
+      "oldTown": false,
+      "startsOn": "2026-11-27",
+      "endsOn": "2026-11-27",
+      "startTime": "21:00",
+      "cost": "15 €",
       "summary": "Night Activities",
       "plan": "Check the Vilnius Events listing for the venue, event time and ticket details.",
       "weather": [],
