@@ -1,369 +1,6 @@
 {
-  "updatedAt": "2026-11-27T10:59:11.710009+00:00",
+  "updatedAt": "2026-11-28T10:36:32.777681+00:00",
   "events": [
-    {
-      "id": "vilnius-events-lt-domino-teatro-premjera-pasimatym-aidimai",
-      "category": "event",
-      "title": "Domino Theatre Premiere: “Dating Games”",
-      "url": "https://www.vilnius-events.lt/en/event/lt-domino-teatro-premjera-pasimatym-aidimai/",
-      "link": "Official event details",
-      "area": "”Domino” Theatre",
-      "place": "”Domino” Theatre",
-      "oldTown": false,
-      "startsOn": "2026-11-27",
-      "endsOn": "2026-11-27",
-      "startTime": "19:00",
-      "cost": "32.60 €",
-      "summary": "Theatre",
-      "plan": "Check the Vilnius Events listing for the venue, event time and ticket details.",
-      "weather": [],
-      "seasons": [
-        "autumn"
-      ]
-    },
-    {
-      "id": "vilnius-events-lt-improvizacinis-spektaklis-ofiso-pasaulis-1",
-      "category": "event",
-      "title": "Improvisational Performance “Office World” #1",
-      "url": "https://www.vilnius-events.lt/en/event/lt-improvizacinis-spektaklis-ofiso-pasaulis-1/",
-      "link": "Official event details",
-      "area": "(LT) Meno erdvės “VILEIŠIO18″",
-      "place": "(LT) Meno erdvės “VILEIŠIO18″",
-      "oldTown": false,
-      "startsOn": "2026-11-27",
-      "endsOn": "2026-11-27",
-      "startTime": "19:00",
-      "cost": "8 €",
-      "summary": "Night Activities · Theatre",
-      "plan": "Check the Vilnius Events listing for the venue, event time and ticket details.",
-      "weather": [],
-      "seasons": [
-        "autumn"
-      ]
-    },
-    {
-      "id": "vilnius-events-lt-jazz-duo-e-sabilo-pianinas-m-pratkelis-saksofonas",
-      "category": "event",
-      "title": "JAZZ DUO • E. Sabilo – Piano, M. Pratkelis – Saxophone",
-      "url": "https://www.vilnius-events.lt/en/event/lt-jazz-duo-e-sabilo-pianinas-m-pratkelis-saksofonas/",
-      "link": "Official event details",
-      "area": "Bar “Veranda”",
-      "place": "Bar “Veranda”",
-      "oldTown": false,
-      "startsOn": "2026-11-27",
-      "endsOn": "2026-11-27",
-      "startTime": "18:30",
-      "cost": "Free",
-      "summary": "Concerts · Free Admission",
-      "plan": "Check the Vilnius Events listing for the venue, event time and ticket details.",
-      "weather": [],
-      "seasons": [
-        "autumn"
-      ]
-    },
-    {
-      "id": "vilnius-events-jazz-stories-the-tenor-legacy",
-      "category": "event",
-      "title": "Jazz Stories – The Tenor Legacy",
-      "url": "https://www.vilnius-events.lt/en/event/jazz-stories-the-tenor-legacy/",
-      "link": "Official event details",
-      "area": "Muzikos stotis | Live music venue",
-      "place": "Muzikos stotis | Live music venue",
-      "oldTown": false,
-      "startsOn": "2026-11-27",
-      "endsOn": "2026-11-27",
-      "startTime": "19:30",
-      "cost": "22 €",
-      "summary": "Night Activities · Concerts",
-      "plan": "Check the Vilnius Events listing for the venue, event time and ticket details.",
-      "weather": [],
-      "seasons": [
-        "autumn"
-      ]
-    },
-    {
-      "id": "vilnius-events-lt-lietuvi-animacini-film-konkursin-programa-01lt-lietuvi-ki-rie-utai-taff-tindirindis-2026",
-      "category": "event",
-      "title": "LITHUANIAN ANIMATION FILM COMPETITION – 01LT – “LITHUANIAN NUTS” | TAFF TINDIRINDIS 2026",
-      "url": "https://www.vilnius-events.lt/en/event/lt-lietuvi-animacini-film-konkursin-programa-01lt-lietuvi-ki-rie-utai-taff-tindirindis-2026/",
-      "link": "Official event details",
-      "area": "Museum of Theatre, Music and Cinema",
-      "place": "Museum of Theatre, Music and Cinema",
-      "oldTown": false,
-      "startsOn": "2026-11-27",
-      "endsOn": "2026-11-27",
-      "startTime": "18:00",
-      "cost": "Free",
-      "summary": "Festivals · Free Admission",
-      "plan": "Check the Vilnius Events listing for the venue, event time and ticket details.",
-      "weather": [],
-      "seasons": [
-        "autumn"
-      ]
-    },
-    {
-      "id": "vilnius-events-lt-kariuomen-s-dienos-min-jimas-koncertas-su-grupe-del-ia",
-      "category": "event",
-      "title": "Lithuanian Armed Forces Day Celebration and Concert by DELČIA",
-      "url": "https://www.vilnius-events.lt/en/event/lt-kariuomen-s-dienos-min-jimas-koncertas-su-grupe-del-ia/",
-      "link": "Official event details",
-      "area": "Bar “Alaus namai”",
-      "place": "Bar “Alaus namai”",
-      "oldTown": false,
-      "startsOn": "2026-11-27",
-      "endsOn": "2026-11-27",
-      "startTime": "19:00",
-      "cost": "Free",
-      "summary": "Night Activities · Concerts",
-      "plan": "Check the Vilnius Events listing for the venue, event time and ticket details.",
-      "weather": [],
-      "seasons": [
-        "autumn"
-      ]
-    },
-    {
-      "id": "vilnius-events-lithuanian-state-youth-theatre-premiere-the-marriage-directed-by-adomas-ju-ka",
-      "category": "event",
-      "title": "Lithuanian State Youth Theatre | Premiere “THE MARRIAGE” | Directed by Adomas Juška",
-      "url": "https://www.vilnius-events.lt/en/event/lithuanian-state-youth-theatre-premiere-the-marriage-directed-by-adomas-ju-ka/",
-      "link": "Official event details",
-      "area": "Youth Theatre",
-      "place": "Youth Theatre",
-      "oldTown": false,
-      "startsOn": "2026-11-27",
-      "endsOn": "2026-11-27",
-      "startTime": "18:30",
-      "cost": "24,95 €",
-      "summary": "Theatre",
-      "plan": "Check the Vilnius Events listing for the venue, event time and ticket details.",
-      "weather": [],
-      "seasons": [
-        "autumn"
-      ]
-    },
-    {
-      "id": "vilnius-events-mk-26-jazz-dialogues-petras-vy-niauskas-christian-ramond-klaus-kugel",
-      "category": "event",
-      "title": "MKČ26 | “JAZZ DIALOGUES” | PETRAS VYŠNIAUSKAS, CHRISTIAN RAMOND, KLAUS KUGEL",
-      "url": "https://www.vilnius-events.lt/en/event/mk-26-jazz-dialogues-petras-vy-niauskas-christian-ramond-klaus-kugel/",
-      "link": "Official event details",
-      "area": "St. Catherine‘s Church",
-      "place": "St. Catherine‘s Church",
-      "oldTown": false,
-      "startsOn": "2026-11-27",
-      "endsOn": "2026-11-27",
-      "startTime": "19:00",
-      "cost": "12.90 €",
-      "summary": "Festivals · Concerts",
-      "plan": "Check the Vilnius Events listing for the venue, event time and ticket details.",
-      "weather": [],
-      "seasons": [
-        "autumn"
-      ]
-    },
-    {
-      "id": "vilnius-events-magic-of-lithuanian-christmas-free-educational-experiences",
-      "category": "event",
-      "title": "Magic of Lithuanian Christmas: Free Educational Experiences",
-      "url": "https://www.vilnius-events.lt/en/event/magic-of-lithuanian-christmas-free-educational-experiences/",
-      "link": "Official event details",
-      "area": "Vilnius Tourist Information Centre",
-      "place": "Vilnius Tourist Information Centre",
-      "oldTown": false,
-      "startsOn": "2026-11-27",
-      "endsOn": "2026-11-27",
-      "startTime": "16:00",
-      "cost": "Free",
-      "summary": "Educations · Christmas in Vilnius",
-      "plan": "Check the Vilnius Events listing for the venue, event time and ticket details.",
-      "weather": [],
-      "seasons": [
-        "autumn"
-      ]
-    },
-    {
-      "id": "vilnius-events-neda-labutis-banys-trio-4",
-      "category": "event",
-      "title": "Neda / Labutis / Banys trio",
-      "url": "https://www.vilnius-events.lt/en/event/neda-labutis-banys-trio-4/",
-      "link": "Official event details",
-      "area": "Jazz Cellar 11",
-      "place": "Jazz Cellar 11",
-      "oldTown": false,
-      "startsOn": "2026-11-27",
-      "endsOn": "2026-11-27",
-      "startTime": "20:30",
-      "cost": "29 €",
-      "summary": "Night Activities · Concerts",
-      "plan": "Check the Vilnius Events listing for the venue, event time and ticket details.",
-      "weather": [],
-      "seasons": [
-        "autumn"
-      ]
-    },
-    {
-      "id": "vilnius-events-lt-prodiuseris-z-mudzki-pristato-studijos-se-ma-for-film-program-taff-tindirindis-2026",
-      "category": "event",
-      "title": "PRODUCER Z. ŻMUDZKI PRESENTS A FILM PROGRAMME BY THE SE-MA-FOR STUDIO | TAFF TINDIRINDIS 2026",
-      "url": "https://www.vilnius-events.lt/en/event/lt-prodiuseris-z-mudzki-pristato-studijos-se-ma-for-film-program-taff-tindirindis-2026/",
-      "link": "Official event details",
-      "area": "Museum of Theatre, Music and Cinema",
-      "place": "Museum of Theatre, Music and Cinema",
-      "oldTown": false,
-      "startsOn": "2026-11-27",
-      "endsOn": "2026-11-27",
-      "startTime": "11:00",
-      "cost": "Free",
-      "summary": "Educations · Festivals",
-      "plan": "Check the Vilnius Events listing for the venue, event time and ticket details.",
-      "weather": [],
-      "seasons": [
-        "autumn"
-      ]
-    },
-    {
-      "id": "vilnius-events-lt-spektaklis-himnas-meilei-2",
-      "category": "event",
-      "title": "Theatre Performance “Hymn to Love”",
-      "url": "https://www.vilnius-events.lt/en/event/lt-spektaklis-himnas-meilei-2/",
-      "link": "Official event details",
-      "area": "M. K. Čiurlionio House",
-      "place": "M. K. Čiurlionio House",
-      "oldTown": false,
-      "startsOn": "2026-11-27",
-      "endsOn": "2026-11-27",
-      "startTime": "18:00",
-      "cost": "10 €",
-      "summary": "Theatre",
-      "plan": "Check the Vilnius Events listing for the venue, event time and ticket details.",
-      "weather": [],
-      "seasons": [
-        "autumn"
-      ]
-    },
-    {
-      "id": "vilnius-events-with-masks-without-masks-dans-turbulans",
-      "category": "event",
-      "title": "With Masks, Without Masks: dans turbulans",
-      "url": "https://www.vilnius-events.lt/en/event/with-masks-without-masks-dans-turbulans/",
-      "link": "Official event details",
-      "area": "Lukiškės Prison",
-      "place": "Lukiškės Prison",
-      "oldTown": false,
-      "startsOn": "2026-11-27",
-      "endsOn": "2026-11-27",
-      "startTime": "20:00",
-      "cost": "20 €",
-      "summary": "Night Activities · Concerts",
-      "plan": "Check the Vilnius Events listing for the venue, event time and ticket details.",
-      "weather": [],
-      "seasons": [
-        "autumn"
-      ]
-    },
-    {
-      "id": "vilnius-events-xata-ii-flat-party",
-      "category": "event",
-      "title": "XATA II — Flat Party",
-      "url": "https://www.vilnius-events.lt/en/event/xata-ii-flat-party/",
-      "link": "Official event details",
-      "area": "Zolak Micro Art Residence",
-      "place": "Zolak Micro Art Residence",
-      "oldTown": false,
-      "startsOn": "2026-11-27",
-      "endsOn": "2026-11-27",
-      "startTime": "20:00",
-      "cost": "5 €",
-      "summary": "Night Activities",
-      "plan": "Check the Vilnius Events listing for the venue, event time and ticket details.",
-      "weather": [],
-      "seasons": [
-        "autumn"
-      ]
-    },
-    {
-      "id": "vilnius-events-audioplaza-ohm-sweet-laxxiste-a-vladas-dieninis-brokenchord-h-ld",
-      "category": "event",
-      "title": "audioplaza /Ohm Sweet | Laxxiste A. | Vladas Dieninis | Brokenchord | Hìldå",
-      "url": "https://www.vilnius-events.lt/en/event/audioplaza-ohm-sweet-laxxiste-a-vladas-dieninis-brokenchord-h-ld/",
-      "link": "Official event details",
-      "area": "Cultural Complex “Sodas 2123″",
-      "place": "Cultural Complex “Sodas 2123″",
-      "oldTown": false,
-      "startsOn": "2026-11-27",
-      "endsOn": "2026-11-27",
-      "startTime": "21:00",
-      "cost": "15 €",
-      "summary": "Night Activities",
-      "plan": "Check the Vilnius Events listing for the venue, event time and ticket details.",
-      "weather": [],
-      "seasons": [
-        "autumn"
-      ]
-    },
-    {
-      "id": "vilnius-events-lt-spektaklis-autostrada-xiii-lenk-kult-ros-dienos",
-      "category": "event",
-      "title": "“HIGHWAY” PERFORMANCE | 13th Days of Polish Culture",
-      "url": "https://www.vilnius-events.lt/en/event/lt-spektaklis-autostrada-xiii-lenk-kult-ros-dienos/",
-      "link": "Official event details",
-      "area": "House of Polish Culture",
-      "place": "House of Polish Culture",
-      "oldTown": false,
-      "startsOn": "2026-11-27",
-      "endsOn": "2026-11-27",
-      "startTime": "18:30",
-      "cost": "7 €",
-      "summary": "Festivals · Concerts",
-      "plan": "Check the Vilnius Events listing for the venue, event time and ticket details.",
-      "weather": [],
-      "seasons": [
-        "autumn"
-      ]
-    },
-    {
-      "id": "vilnius-events-lt-vilniaus-performanso-meno-bienal",
-      "category": "event",
-      "title": "Vilnius Biennial of Performance Art",
-      "url": "https://www.vilnius-events.lt/en/event/lt-vilniaus-performanso-meno-bienal/",
-      "link": "Official event details",
-      "area": "Various venues",
-      "place": null,
-      "oldTown": false,
-      "startsOn": "2026-11-19",
-      "endsOn": "2026-11-29",
-      "startTime": null,
-      "cost": "Check listing",
-      "summary": "Festivals · Theatre",
-      "plan": "Check the Vilnius Events listing for the venue, event time and ticket details.",
-      "weather": [],
-      "seasons": [
-        "autumn"
-      ]
-    },
-    {
-      "id": "vilnius-events-audiovisual-story-let-vilnius-recharge-you-at-the-vilnius-tourist-information-centre",
-      "category": "event",
-      "title": "Audiovisual Story “Let Vilnius Recharge You” at the Vilnius Tourist Information Centre",
-      "url": "https://www.vilnius-events.lt/en/event/audiovisual-story-let-vilnius-recharge-you-at-the-vilnius-tourist-information-centre/",
-      "link": "Official event details",
-      "area": "Vilnius Tourist Information Centre",
-      "place": "Vilnius Tourist Information Centre",
-      "oldTown": false,
-      "startsOn": "2026-09-27",
-      "endsOn": "2027-12-31",
-      "startTime": null,
-      "cost": "Free",
-      "summary": "Free Admission · For Families",
-      "plan": "Check the Vilnius Events listing for the venue, event time and ticket details.",
-      "weather": [],
-      "seasons": [
-        "autumn",
-        "spring",
-        "summer",
-        "winter"
-      ]
-    },
     {
       "id": "vilnius-events-lt-linksmas-klumpi-sune-imo-vakar-lis-prie-vent-andriej",
       "category": "event",
@@ -438,6 +75,26 @@
       "startTime": "10:00",
       "cost": "10 €",
       "summary": "Exhibitions · For Families",
+      "plan": "Check the Vilnius Events listing for the venue, event time and ticket details.",
+      "weather": [],
+      "seasons": [
+        "autumn"
+      ]
+    },
+    {
+      "id": "vilnius-events-dj-exoternal-x-patricia-kokett",
+      "category": "event",
+      "title": "DJ: Exoternal x Patricia Kokett",
+      "url": "https://www.vilnius-events.lt/en/event/dj-exoternal-x-patricia-kokett/",
+      "link": "Official event details",
+      "area": "Adata bar",
+      "place": "Adata bar",
+      "oldTown": false,
+      "startsOn": "2026-11-28",
+      "endsOn": "2026-11-28",
+      "startTime": "21:00",
+      "cost": "Free",
+      "summary": "Night Activities",
       "plan": "Check the Vilnius Events listing for the venue, event time and ticket details.",
       "weather": [],
       "seasons": [
@@ -745,6 +402,26 @@
       ]
     },
     {
+      "id": "vilnius-events-towards-the-big-stage",
+      "category": "event",
+      "title": "TOWARDS THE BIG STAGE",
+      "url": "https://www.vilnius-events.lt/en/event/towards-the-big-stage/",
+      "link": "Official event details",
+      "area": "MUZIKOS SVETAINĖ",
+      "place": "MUZIKOS SVETAINĖ",
+      "oldTown": false,
+      "startsOn": "2026-11-28",
+      "endsOn": "2026-11-28",
+      "startTime": "19:00",
+      "cost": "21.20 €",
+      "summary": "Night Activities · Concerts",
+      "plan": "Check the Vilnius Events listing for the venue, event time and ticket details.",
+      "weather": [],
+      "seasons": [
+        "autumn"
+      ]
+    },
+    {
       "id": "vilnius-events-lt-xxvi-fortepijonini-ansambli-festivalis-ansambli-pasaulyje",
       "category": "event",
       "title": "The 26th Piano Ensemble Festival “In the World of Ensembles”",
@@ -886,6 +563,29 @@
       ]
     },
     {
+      "id": "vilnius-events-audiovisual-story-let-vilnius-recharge-you-at-the-vilnius-tourist-information-centre",
+      "category": "event",
+      "title": "Audiovisual Story “Let Vilnius Recharge You” at the Vilnius Tourist Information Centre",
+      "url": "https://www.vilnius-events.lt/en/event/audiovisual-story-let-vilnius-recharge-you-at-the-vilnius-tourist-information-centre/",
+      "link": "Official event details",
+      "area": "Vilnius Tourist Information Centre",
+      "place": "Vilnius Tourist Information Centre",
+      "oldTown": false,
+      "startsOn": "2026-09-27",
+      "endsOn": "2027-12-31",
+      "startTime": null,
+      "cost": "Free",
+      "summary": "Free Admission · For Families",
+      "plan": "Check the Vilnius Events listing for the venue, event time and ticket details.",
+      "weather": [],
+      "seasons": [
+        "autumn",
+        "spring",
+        "summer",
+        "winter"
+      ]
+    },
+    {
       "id": "vilnius-events-christmas-embroidery-workshop-at-the-10motifs-showroom",
       "category": "event",
       "title": "Christmas Embroidery Workshop at the 10motifs Showroom",
@@ -946,26 +646,6 @@
       ]
     },
     {
-      "id": "vilnius-events-guided-tour-of-the-cac-exhibitions",
-      "category": "event",
-      "title": "Guided tour of the CAC exhibitions",
-      "url": "https://www.vilnius-events.lt/en/event/guided-tour-of-the-cac-exhibitions/",
-      "link": "Official event details",
-      "area": "Contemporary Art Centre (CAC)",
-      "place": "Contemporary Art Centre (CAC)",
-      "oldTown": false,
-      "startsOn": "2026-11-29",
-      "endsOn": "2026-11-29",
-      "startTime": "15:00",
-      "cost": "12 €",
-      "summary": "Exhibitions · Excursions",
-      "plan": "Check the Vilnius Events listing for the venue, event time and ticket details.",
-      "weather": [],
-      "seasons": [
-        "autumn"
-      ]
-    },
-    {
       "id": "vilnius-events-keistuoliai-i-geltonu-plytu-kelias",
       "category": "event",
       "title": "KEISTUOLIAI THEATRE | The Yellow Brick Road",
@@ -999,46 +679,6 @@
       "startTime": "12:00",
       "cost": "12 €",
       "summary": "Christmas in Vilnius · Concerts",
-      "plan": "Check the Vilnius Events listing for the venue, event time and ticket details.",
-      "weather": [],
-      "seasons": [
-        "autumn"
-      ]
-    },
-    {
-      "id": "vilnius-events-lt-muzikinis-spektaklis-vaikams-peleda-drulija-3",
-      "category": "event",
-      "title": "Musical performance for children “Pelėda Drūlija 3”",
-      "url": "https://www.vilnius-events.lt/en/event/lt-muzikinis-spektaklis-vaikams-peleda-drulija-3/",
-      "link": "Official event details",
-      "area": "Concert Hall “Compensa”",
-      "place": "Concert Hall “Compensa”",
-      "oldTown": false,
-      "startsOn": "2026-11-29",
-      "endsOn": "2026-11-29",
-      "startTime": "15:00",
-      "cost": "23.70 €",
-      "summary": "Theatre · For Families",
-      "plan": "Check the Vilnius Events listing for the venue, event time and ticket details.",
-      "weather": [],
-      "seasons": [
-        "autumn"
-      ]
-    },
-    {
-      "id": "vilnius-events-lt-premjera-ponia-majer-pauk-tel-spektaklis-vaikams",
-      "category": "event",
-      "title": "Premiere! MRS MEYER, LITTLE BIRD || A Children’s Theatre Performance",
-      "url": "https://www.vilnius-events.lt/en/event/lt-premjera-ponia-majer-pauk-tel-spektaklis-vaikams/",
-      "link": "Official event details",
-      "area": "Vilnius Puppet Theatre “Lėlė”",
-      "place": "Vilnius Puppet Theatre “Lėlė”",
-      "oldTown": false,
-      "startsOn": "2026-11-29",
-      "endsOn": "2026-11-29",
-      "startTime": "14:00",
-      "cost": "14 €",
-      "summary": "Theatre · For Families",
       "plan": "Check the Vilnius Events listing for the venue, event time and ticket details.",
       "weather": [],
       "seasons": [
@@ -1115,8 +755,8 @@
       "place": null,
       "oldTown": false,
       "startsOn": "2026-12-12",
-      "endsOn": "2026-12-13",
-      "startTime": null,
+      "endsOn": "2026-12-12",
+      "startTime": "12:00",
       "cost": "Free",
       "summary": "Festivals · Christmas in Vilnius",
       "plan": "Check the Vilnius Events listing for the venue, event time and ticket details.",
